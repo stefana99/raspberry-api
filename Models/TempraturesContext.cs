@@ -11,6 +11,9 @@ namespace raspberry_api.Models
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Reading>().HasKey(x => x.Id);
+            builder.Entity<Reading>()
+            .Property(b => b.TimeStamp)
+            .HasDefaultValue(DateTime.Now);
             base.OnModelCreating(builder);
         }
         public DbSet<Reading> Readings { get; set; }
