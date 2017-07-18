@@ -1,0 +1,8 @@
+/Users/stefanjohann/Code/raspberry-api/bin/Debug/netcoreapp1.1/raspberry-api.deps.json
+/Users/stefanjohann/Code/raspberry-api/bin/Debug/netcoreapp1.1/raspberry-api.runtimeconfig.json
+/Users/stefanjohann/Code/raspberry-api/bin/Debug/netcoreapp1.1/raspberry-api.runtimeconfig.dev.json
+/Users/stefanjohann/Code/raspberry-api/bin/Debug/netcoreapp1.1/raspberry-api.dll
+/Users/stefanjohann/Code/raspberry-api/bin/Debug/netcoreapp1.1/raspberry-api.pdb
+/Users/stefanjohann/Code/raspberry-api/obj/Debug/netcoreapp1.1/raspberry-api.AssemblyInfo.cs
+/Users/stefanjohann/Code/raspberry-api/obj/Debug/netcoreapp1.1/raspberry-api.dll
+/Users/stefanjohann/Code/raspberry-api/obj/Debug/netcoreapp1.1/raspberry-api.pdb
