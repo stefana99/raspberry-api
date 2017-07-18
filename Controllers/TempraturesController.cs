@@ -19,7 +19,7 @@ namespace raspberry_api.Controllers
         [HttpGet]
         public IEnumerable<Reading> Get()
         {
-            return await _context.Readings.ToList();
+            return _context.Readings.ToList();
         }
     }
 }
