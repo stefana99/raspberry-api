@@ -21,5 +21,13 @@ namespace raspberry_api.Controllers
         {
             return _context.Readings.ToList();
         }
+
+        [HttpPost]
+        public IActionResult Post([FromBody]Reading value)
+        {
+            _context.Readings.Add(value);
+            _context.SaveChanges();
+            return StatusCode(201, value);
+        }
     }
 }
