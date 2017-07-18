@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.EntityFrameworkCore;
+using raspberry_api.Models;
 namespace raspberry_api
 {
     public class Startup
@@ -19,6 +20,7 @@ namespace raspberry_api
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
+                
             Configuration = builder.Build();
         }
 
@@ -29,6 +31,9 @@ namespace raspberry_api
         {
             // Add framework services.
             services.AddMvc();
+            var connection = @"Server=tcp:raspberry-sja.database.windows.net,1433;Initial Catalog=tempratures;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            services.AddDbContext<TempraturesContext>(options => options.UseSqlServer(connection));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
