@@ -32,7 +32,7 @@ namespace raspberry_api
             // Add framework services.
             services.AddMvc();
             var connection = @"Server=tcp:raspberry-sja.database.windows.net,1433;Initial Catalog=tempratures;Persist Security Info=False;User ID=stefana;Password=Jurassic_99;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-            services.AddDbContext<TempraturesContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<TemperaturesContext>(options => options.UseSqlServer(connection));
 
         }
 

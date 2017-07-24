@@ -7,7 +7,7 @@ using raspberry_api.Models;
 
 namespace raspberryapi.Migrations
 {
-    [DbContext(typeof(TempraturesContext))]
+    [DbContext(typeof(TemperaturesContext))]
     partial class TempraturesContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

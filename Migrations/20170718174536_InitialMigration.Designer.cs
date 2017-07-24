@@ -7,7 +7,7 @@ using raspberry_api.Models;
 
 namespace raspberryapi.Migrations
 {
-    [DbContext(typeof(TempraturesContext))]
+    [DbContext(typeof(TemperaturesContext))]
     [Migration("20170718174536_InitialMigration")]
     partial class InitialMigration
     {

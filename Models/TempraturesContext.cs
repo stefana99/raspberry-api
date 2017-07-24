@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace raspberry_api.Models
 {
-    public class TempraturesContext : DbContext
+    public class TemperaturesContext : DbContext
     {
-        public TempraturesContext(DbContextOptions options) : base(options)
+        public TemperaturesContext(DbContextOptions options) : base(options)
         {}
         protected override void OnModelCreating(ModelBuilder builder)
         {

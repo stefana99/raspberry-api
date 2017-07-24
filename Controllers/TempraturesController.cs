@@ -8,10 +8,10 @@ using raspberry_api.Models;
 namespace raspberry_api.Controllers
 {
     [Route("api/[controller]")]
-    public class TempraturesController : Controller
+    public class TemperaturesController : Controller
     {
-        private readonly TempraturesContext _context;
-        public TempraturesController(TempraturesContext context)
+        private readonly TemperaturesContext _context;
+        public TemperaturesController(TemperaturesContext context)
         {
             _context = context;
         }
