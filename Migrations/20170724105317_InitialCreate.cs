@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace raspberryapi.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,8 +16,8 @@ namespace raspberryapi.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Humidity = table.Column<float>(nullable: false),
-                    Temprature = table.Column<float>(nullable: false),
-                    TimeStamp = table.Column<DateTime>(nullable: false)
+                    Temperature = table.Column<float>(nullable: false),
+                    TimeStamp = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2017, 7, 24, 10, 53, 16, 922, DateTimeKind.Local))
                 },
                 constraints: table =>
                 {

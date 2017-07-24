@@ -8,9 +8,10 @@ using raspberry_api.Models;
 namespace raspberryapi.Migrations
 {
     [DbContext(typeof(TemperaturesContext))]
-    partial class TempraturesContextModelSnapshot : ModelSnapshot
+    [Migration("20170724105317_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
@@ -23,9 +24,11 @@ namespace raspberryapi.Migrations
 
                     b.Property<float>("Humidity");
 
-                    b.Property<float>("Temprature");
+                    b.Property<float>("Temperature");
 
-                    b.Property<DateTime>("TimeStamp");
+                    b.Property<DateTime>("TimeStamp")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValue(new DateTime(2017, 7, 24, 10, 53, 16, 922, DateTimeKind.Local));
 
                     b.HasKey("Id");
 
