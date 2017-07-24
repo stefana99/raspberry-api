@@ -22,7 +22,7 @@ namespace raspberry_api.Models
     public class Reading
     {
         public int Id { get; set; }
-        public float Temprature { get; set; }
+        public float Temperature { get; set; }
         public float Humidity { get; set; }
         public DateTime TimeStamp { get; set; }
     }
